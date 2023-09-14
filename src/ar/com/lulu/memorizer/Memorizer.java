@@ -20,15 +20,17 @@ public class Memorizer {
 	                "5024459455 3469083026 4252230825 3344685035 2619311881 7101000313 7838752886 5875332083 8142061717 7669147303" +
 	                "5982534904 2875546873 1159562863 8823537875 9375195778 1857780532 1712268066 1300192787 6611195909 2164201989";
 
-	        input = input.replaceAll("\\s", "");
+	        input = input.replaceAll("\\s", ""); //se utiliza para eliminar todos los espacios en blanco
 
 	        StringBuilder help = new StringBuilder();
+	        /* El StringBuilder es una clase que permite construir y manipular cadenas de caracteres de manera eficiente en Java. 
+	         * En este contexto específico, se utiliza para construir una cadena de caracteres que se utilizará para resaltar las diferencias entre la entrada del usuario y la constante Pi.*/
 	        boolean helpNeeded = false;
 	        int mistakes = 0;
 
 	        for (int i = 0, j = 0; i < pi.length() && j < input.length(); i++, j++) {
 	            if (pi.charAt(i) == ' ') {
-	                i++; // Saltar espacios en la constante
+	                i++; // Salta espacios en la constante
 	            }
 
 	            if (pi.charAt(i) != input.charAt(j)) {
